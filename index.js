@@ -43,10 +43,6 @@ app.use(express.static('public'));
 
 //Setting up spawns from database
 
-var SpawnSingleton = require('./lib/classes/db-singleton');
-
-var spawnDb = new SpawnSingleton();
-var spawnDD = new SpawnSingleton();
 
 
 //Server listens on port set by Heroku or port 8080 if run on computer without env set up

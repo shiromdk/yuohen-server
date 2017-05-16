@@ -19,6 +19,7 @@
     "cookie-parser": "^1.4.3",
     "express": "^4.15.2",
     "lodash": "^4.17.4",
-    "mongoose": "^4.9.7"
+    "mongoose": "^4.9.7",
+    "promise": "^7.1.1"
   }
 }
