@@ -1,0 +1,24 @@
+{
+  "name": "inft2050-assign",
+  "version": "1.0.0",
+  "description": "INFT2050 Assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Shiro101@bitbucket.org/inft2050group/inft2050-assign.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/inft2050group/inft2050-assign#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.2",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.9.7"
+  }
+}
