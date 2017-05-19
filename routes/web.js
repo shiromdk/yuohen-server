@@ -9,14 +9,7 @@ router.get('/',(req,res)=>{
   res.send('No Main Page Yet');
 });
 
-router.get('/spawnlocations',(req,res)=>{
-  /*var spawnList;
-  spawnModel.find()
-  .then(lists = (results) => {
-    spawnList = results;
-    console.log(spawnList);
-    res.json(spawnList);
-  })*/
+router.get('/api/spawnlocations',(req,res)=>{
   res.json(dbsingleton.get());
 });
 
