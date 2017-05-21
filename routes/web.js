@@ -16,10 +16,17 @@ router.get('/api/spawnlocations',(req,res)=>{
     var currentLatitude = Number.parseFloat(req.query.lat);
     var currentLongitude = Number.parseFloat(req.query.lon);
     spawnmethods.nearSpawnCheck(currentLatitude,currentLongitude);
-    res.json(dbsingleton.get());
+    spawnModel.find()
+        .then(lists = (results) => {
+            res.json(results);
+        })
+    //res.json(dbsingleton.get());
   }else{
     console.log("No query string present");
-    res.json(dbsingleton.get());
+    spawnModel.find()
+        .then(lists = (results) => {
+            res.json(results);
+        })
   }
 });
 
