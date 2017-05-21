@@ -47,16 +47,6 @@ var SpawnCount = require('./config/models/spawncount'); // the mongoose model fo
 const spawnlist= require('./lib/classes/db-singleton');
 spawnlist.sync();
 
-var SpawnModel = require('./config/models/spawns');
-SpawnModel.findOne({'spawnLatitude':-31.892692119531443,'spawnLongitude':151.6968061459325},
-	function(err,spawn){
-		if(spawn){
-			console.log(spawn);
-		}else{
-			console.log("this didnt work");
-		}
-	}
-);
 
 //retrieve spawn count from db or create new counter for first run
 
