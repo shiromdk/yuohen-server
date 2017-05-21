@@ -43,8 +43,14 @@ router.get('/api/interactspawn',(req,res)=>{
             var response = {"response":"1"}
             res.json(response);
           }
-          if(!spawn)console.log("no spawn found");
-          if(err)console.log("error");
+          if(!spawn){
+            var response = {"response":"3"}
+            res.json(response);
+          }
+          if(err){
+            var response = {"response":"4"}
+            res.json(response);
+          }
         });
       }else{
         var response = {"response":"2"}
