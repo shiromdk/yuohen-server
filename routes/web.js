@@ -28,13 +28,20 @@ router.get('/api/interactspawn',(req,res)=>{
   if(req.query.currentlat && req.query.currentlon && req.query.spawnlat && req.query.spawnlon){
     console.log("got here");
       var distance = haversine.haversineDistance(req.query.currentlat,req.query.currentlon,req.query.spawnlat,req.query.spawnlon);
+      console.log(distance);
       if(distance <= 0.015){
         spawnModel.findOneAndRemove({'spawnLatitude':req.query.spawnlat,'spawnLongitude':req.query.spawnlon},
         function(err,spawn) {
-          if(spawn)console.log("found spawn");
+          if(spawn){
+            var response = {"response":"1"}
+            res.json(response);
+          }
           if(!spawn)console.log("no spawn found");
           if(err)console.log("error");
         });
+      }else{
+        var response = {"response":"2"}
+        res.json(response);
       }
   }else{
     console.log("no query");
