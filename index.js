@@ -65,8 +65,6 @@ SpawnModel.findOne({'spawnLatitude':-31.892692119531443,'spawnLongitude':151.696
 
 
 
-var dummySpawnGen = require('./lib/spawns');
-
 
 
 //Server listens on port set by Heroku or port 8080 if run on computer without env set up
